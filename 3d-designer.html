@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Motion — Agiat Tri Farizky</title>
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #000;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.35);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: white;
+      font-size: 50px;
+    }
+
+    .portfolio-item:hover .play-overlay {
+      opacity: 1;
+    }
+
+    /* aspect ratio control */
+    .landscape { aspect-ratio: 16 / 9; }
+    .portrait { aspect-ratio: 9 / 16; }
+
+    @media (max-width: 768px) {
+      .portfolio-grid { gap: 16px; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <h2><a href="index.html">AGIAT <span>TRI FARIZKY</span></a></h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li><a href="contact.html">CONTACT ME</a></li>
+      <li><a href="portofolio.html">PORTOFOLIO</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="lang-switch">
+        <button id="langID">IN</button>
+        <button id="langEN">EN</button>
+      </div>
+      <div class="profile">
+        <img src="img/profile.jpg" alt="profile">
+      </div>
+    </div>
+  </nav>
+
+  <section class="portfolio-hero container">
+    <h1>Kategori: <span class="highlight">3D Desainer</span></h1>
+  </section>
+
+  <section class="portfolio-grid" id="3D Desainer-gallery"></section>
+  <a href="portofolio.html" class="btn-back">← Back to Portfolio</a>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.getElementById('3D Desainer-gallery');
+
+    // Semua item menggunakan source dari folder: agiattri-portfolio-v5/img/portofolio/
+    const items = [
+      { src: 'img/portofolio/3d-desainer/3d-desainer1.jpg', aspect: 'landscape' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer2.jpg', aspect: 'landscape' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer3.jpg', aspect: 'portrait' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer4.jpg', aspect: 'portrait' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer5.jpg', aspect: 'landscape' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer6.jpg', aspect: 'landscape' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer7.jpg', aspect: 'portrait' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer8.jpg', aspect: 'portrait' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer9.jpg', aspect: 'landscape' },
+      { src: 'img/portofolio/3d-desainer/3d-desainer10.jpg', aspect: 'landscape' }
+    ];
+
+    // Generate elemen gambar
+    items.forEach(item => {
+      const el = document.createElement('div');
+      el.classList.add('portfolio-item', item.aspect);
+
+      el.innerHTML = `<img src="${item.src}" alt="3D Desainer" loading="lazy">`;
+
+      gallery.appendChild(el);
+    });
+  });
+</script>

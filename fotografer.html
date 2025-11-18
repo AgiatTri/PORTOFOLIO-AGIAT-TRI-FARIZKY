@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fotografer — Agiat Tri Farizky</title><link rel="icon" href="icons/favicon.ico"><link rel="stylesheet" href="css/style.css"></head><body>
+<nav class="navbar"><div class="logo"><h2><a href="index.html">AGIAT <span>TRI FARIZKY</span></a></h2></div><ul class="nav-links"><li><a href="about.html" data-lang="about">ABOUT ME</a></li><li><a href="contact.html" data-lang="contact">CONTACT ME</a></li><li><a href="portofolio.html" data-lang="portfolio">PORTOFOLIO</a></li></ul><div style="display:flex;align-items:center;gap:10px;"><div class="lang-switch"><button id="langID">IN</button><button id="langEN">EN</button></div><div class="profile"><img src="img/profile.jpg" alt="profile"></div></div></nav>
+<section class="portfolio-hero container"><h1>Kategori: <span class="highlight">Fotografer</span></h1></section>
+<section class="portfolio-grid" id="fotografer-gallery"></section>
+<a href="portofolio.html" class="btn-back">← Back to Portfolio</a>
+
+<!-- lightbox container -->
+<div id="lightbox" onclick="closeLightbox()"></div>
+<script src="js/app.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function(){ loadPortfolio('fotografer', 20); });</script>
+</body></html>
