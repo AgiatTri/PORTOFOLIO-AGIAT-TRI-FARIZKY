@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Agiat Tri Farizky</title>
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ==== GLOBAL BACKGROUND FUTURISTIK ==== */
+    .background-wrapper {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: brightness(0.4) saturate(1.2);
+      pointer-events: none;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0, 255, 204, 0.12), rgba(0, 0, 0, 0.85));
+      backdrop-filter: blur(12px);
+    }
+
+    body {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ==== KONTAINER UTAMA ==== */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 120px auto;
+      padding: 40px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.1);
+    }
+
+    /* ==== KIRI: INFO KONTAK ==== */
+    .contact-info {
+      flex: 1.2;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .contact-info p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 22px;
+      gap: 15px;
+    }
+
+    .contact-item .icon {
+      font-size: 1.8rem;
+      color: #00ffd1;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 255, 204, 0.12);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+
+    .contact-item strong {
+      color: #00ffd1;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-item div {
+      font-size: 0.9rem;
+      color: #eee;
+    }
+
+    /* ==== KANAN: FORM KONTAK ==== */
+    .contact-form {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 28px 30px 35px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 255, 204, 0.25);
+    }
+
+    .contact-form h3 {
+      color: #000;
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      border-bottom: 2px solid #00c8a6;
+      background: transparent;
+      outline: none;
+      font-size: 0.95rem;
+      color: #000;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #00ffd1;
+    }
+
+    .contact-form button {
+      background: #00c8a6;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: all 0.3s ease;
+    }
+    
+
+    .contact-form button:hover {
+      background: #00ffd1;
+      transform: translateY(-2px);
+    }
+
+    
+    /* ==== TOMBOL BACK ==== */
+    .btn-back {
+      display: block;
+      margin: 20px auto;
+      background: none;
+      color: #00ffd1;
+      border: 1px solid #00ffd1;
+      padding: 8px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: #00ffd1;
+      color: #000;
+    }
+    
+
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .contact-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== FUTURISTIC BACKGROUND VIDEO ===== -->
+  <div class="background-wrapper">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video/Space Nebula Background Video 7 - No Copyright.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+  <!-- ===================================== -->
+
+  <nav class="navbar">
+    <div class="logo">
+      <h2><a href="index.html">AGIAT <span>TRI FARIZKY</span></a></h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portofolio.html">Portofolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="lang-switch">
+        <button id="langID">IN</button><button id="langEN">EN</button>
+      </div>
+      <div class="profile"><img src="img/profile.jpg" alt="profile"></div>
+    </div>
+  </nav>
+
+  <section class="contact-container fade-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Halo! Saya seorang desainer grafis yang senang mengubah ide menjadi karya visual yang hidup. Mulai dari logo, poster, konten media sosial, hingga kemasan produk — setiap desain saya buat dengan sentuhan unik dan karakter yang kuat.
+        Bagi saya, desain bukan hanya soal warna dan bentuk, tapi tentang menciptakan pengalaman visual yang membuat orang berhenti sejenak dan berkata, <strong>"Wow, keren!"</strong></p>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="icon">🏠</div>
+          <div>
+            <strong>Address</strong>
+            <div>Works Experient History That Makes Me Grow</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <div>0812-2222-4444</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <div>adjiadajiwidjfjkfk@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Message</h3>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="E-mail" required>
+        <textarea placeholder="Send Me Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <button class="btn-back" onclick="window.location.href='index.html'">← Back to Home</button>
+
+  <footer>
+    <p style="text-align:center;margin:40px 0 20px;">© 2025 Agiat Tri Farizky. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
