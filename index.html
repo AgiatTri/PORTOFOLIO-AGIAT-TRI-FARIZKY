@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Agiat Tri Farizky — Portfolio</title>
+<link rel="icon" href="icons/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head><body>
+  <body>
+<!-- ===== BACKGROUND SECTION ===== -->
+<div class="background-wrapper">
+  <!-- Gunakan salah satu: gambar / video / efek canvas -->
+  <!-- Contoh: Video background -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/Space Nebula Background  mix.mp4" type="video/mp4">
+  </video>
+
+  <!-- Jika ingin gambar saja -->
+  <!-- <img src="img/bg-futuristic.jpg" alt="Background" class="bg-image"> -->
+
+  <!-- Lapisan overlay untuk efek gelap transparan -->
+  <div class="bg-overlay"></div>
+</div>
+<!-- ===== END BACKGROUND ===== -->
+
+<div id="loader"><h1>AGIAT</h1><p data-loader-text>Loading Agiat Portfolio...</p></div>
+<nav class="navbar">
+  <div class="logo"><h2><a href="index.html">AGIAT <span>TRI FARIZKY</span></a></h2></div>
+  <ul class="nav-links">
+    <li><a href="about.html" data-lang="about">ABOUT ME</a></li>
+    <li><a href="contact.html" data-lang="contact">CONTACT ME</a></li>
+    <li><a href="portofolio.html" data-lang="portfolio">PORTOFOLIO</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="lang-switch"><button id="langID">IN</button><button id="langEN">EN</button></div>
+    <div class="profile"><img src="img/profile.jpg" alt="profile"></div>
+  </div>
+</nav>
+
+<section class="hero container">
+  <div class="hero-text" data-aos="fade-right">
+    <p>Hello There!</p>
+    <h1>I'm <span class="highlight">Agiat Tri Farizky</span>, <br><span data-lang="job">Designer Graphic Based in Indonesia</span></h1>
+    <p class="desc" data-lang="intro">Hai! Saya seorang desainer grafis yang senang mengubah ide menjadi karya visual yang hidup.</p>
+    <div style="margin-top:18px;">
+      <a href="portofolio.html" class="btn btn-primary" data-lang="explore">EXPLORE NOW</a>
+      <a href="contact.html" class="btn btn-outline" data-lang="hire">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<div class="social-sidebar" data-aos="fade-left">
+  <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+  <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+  <a href="#"><img src="icons/whatsapp.svg" alt="WhatsApp"></a>
+  <a href="#"><img src="icons/tiktok.svg" alt="TikTok"></a>
+  <a href="#"><img src="icons.youtube.svg" alt="YouTube"></a>
+</div>
+
+<section class="category-slider" data-aos="fade-up">
+  <div class="slide-track">
+    <div class="slide">
+      <a href="motion.html">
+        <div class="category-box">
+          <img src="img/portofolio/motion/motion1.jpg" alt="Motion">
+          <div class="overlay-text">Motion</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="desain-grafis.html">
+        <div class="category-box">
+          <img src="img/portofolio/desain-grafis/desain-grafis1.jpg" alt="Desain Grafis">
+          <div class="overlay-text">Desain Grafis</div>
+        </div>
+      </a>
+    </div>
+
+
+<div class="slide">
+  <a href="3d-desainer.html">
+    <div class="category-box">
+      <!-- onerror: sembunyikan <img> jika gagal load, tambahkan class no-img ke parent -->
+      <img src="img/portofolio/3d-designer/3d-designer1.jpg"
+           alt="3D Desainer"
+           onerror="this.style.display='none'; this.parentNode.classList.add('no-img');">
+      <div class="overlay-text">3D Desainer</div>
+    </div>
+  </a>
+</div>
+
+
+    <div class="slide">
+      <a href="fotografer.html">
+        <div class="category-box">
+          <img src="img/portofolio/fotografer/fotografer1.jpg" alt="Fotografer">
+          <div class="overlay-text">Fotografer</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="artworks.html">
+        <div class="category-box">
+          <img src="img/portofolio/artworks/artworks1.jpg" alt="Artworks">
+          <div class="overlay-text">Artworks</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<script src="js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body></html>
